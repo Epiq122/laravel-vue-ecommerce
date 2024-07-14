@@ -3,13 +3,22 @@ import Dashboard from "../views/DashboardView.vue";
 import Login from "../views/LoginView.vue";
 import ForgotPasswordView from "../views/ForgotPasswordView.vue";
 import ResetPasswordView from "../views/ResetPasswordView.vue";
+import AppLayout from "../components/AppLayout.vue";
 
 const routes = [
     {
-        path: "/dashboard",
-        name: "dashboard",
-        component: Dashboard,
+        path: "/app",
+        name: "app",
+        component: AppLayout,
+        children: [
+            {
+                path: "dashboard",
+                name: "app.dashboard",
+                component: Dashboard,
+            },
+        ],
     },
+
     {
         path: "/login",
         name: "login",

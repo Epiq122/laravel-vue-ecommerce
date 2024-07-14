@@ -9,7 +9,7 @@ import {
 
 <template>
     <div
-        class="w-[200px] bg-indigo-900 text-gray-300 py-4 px-2 transition-colors"
+        class="w-[200px] bg-indigo-900 text-gray-300 py-4 px-2 transition-all duration-300"
     >
         <router-link
             :to="{ name: 'app.dashboard' }"

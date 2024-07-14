@@ -43,7 +43,7 @@ import GuestLayout from "../components/GuestLayout.vue";
 
             <div class="flex items-center justify-between">
                 <router-link
-                    :to="{ name: 'dashboard' }"
+                    :to="{ name: 'app.dashboard' }"
                     class="text-sm font-medium text-indigo-600 hover:text-indigo-600"
                     >Back to dashboard</router-link
                 >

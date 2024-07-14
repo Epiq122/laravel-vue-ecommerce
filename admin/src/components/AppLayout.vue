@@ -1,5 +1,6 @@
 <script setup>
 import Sidebar from "./Sidebar.vue";
+import TopHeader from "./TopHeader.vue";
 
 const { title } = defineProps({
     title: String,
@@ -7,12 +8,12 @@ const { title } = defineProps({
 </script>
 
 <template>
-    <div class="flex min-h-screen">
+    <div class="flex min-h-screen bg-gray-200">
         <sidebar />
         <div class="flex-1">
-            <header class="h-8 shadow bg-white">Header</header>
-            <main>
-                <router-view></router-view>
+            <top-header />
+            <main class="p-6">
+                <router-view />
             </main>
         </div>
     </div>

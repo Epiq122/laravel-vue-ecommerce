@@ -6,6 +6,7 @@ import ForgotPasswordView from "../views/ForgotPasswordView.vue";
 import ResetPasswordView from "../views/ResetPasswordView.vue";
 import AppLayout from "../components/AppLayout.vue";
 import { useUserStore } from "../store/index.js";
+import NotFound from "../components/NotFound.vue";
 // import store from "../store";
 
 const routes = [
@@ -61,6 +62,11 @@ const routes = [
             requiresGuest: true,
         },
         component: ResetPasswordView,
+    },
+    {
+        path: "/:pathMatch(.*)*",
+        name: "notFound",
+        component: NotFound,
     },
 ];
 const router = createRouter({

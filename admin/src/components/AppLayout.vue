@@ -1,7 +1,7 @@
 <script setup>
 import Sidebar from "./Sidebar.vue";
-import TopHeader from "./TopHeader.vue";
-import { ref } from "vue";
+import TopHeader from "./Navbar.vue";
+import { ref, onMounted, onUnmounted } from "vue";
 
 const isSidebarOpen = ref(true);
 
@@ -11,6 +11,23 @@ const { title } = defineProps({
 
 function toggleSidebar() {
     isSidebarOpen.value = !isSidebarOpen.value;
+}
+
+onMounted(() => {
+    handleResize();
+    window.addEventListener("resize", () => {
+        handleResize();
+    });
+});
+
+onUnmounted(() => {
+    window.removeEventListener("resize", () => {
+        handleResize();
+    });
+});
+
+function handleResize() {
+    isSidebarOpen.value = window.outerWidth > 768;
 }
 </script>
 

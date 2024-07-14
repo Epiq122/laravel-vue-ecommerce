@@ -30,7 +30,7 @@ const emit = defineEmits(["toggle-sidebar"]);
                 />
                 <small>Artimus Gordon</small>
                 <ChevronDownIcon
-                    class="-mr-1 ml-2 h-5 w-5 text-violet-200 hover:text-violet-100"
+                    class="-mr-1 ml-2 h-5 w-5 text-violet-300 hover:text-violet-100"
                     aria-hidden="true"
                 />
             </MenuButton>
